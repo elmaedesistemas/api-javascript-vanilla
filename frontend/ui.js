@@ -16,7 +16,7 @@ class UI {
                 <div class="card m-2">
                   <div class="row">
                     <div class="col-md-4">
-                      <img src="http://127.0.0.1:4000${book.imagePath}" alt="image" class="img-fluid" />
+                      <img src="${book.imagePath}" alt="image" class="img-fluid" />
                     </div>
                     <div class="col-md-8">
                       <div class="card-block px-2">

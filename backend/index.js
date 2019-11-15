@@ -6,6 +6,7 @@ if(process.env.NODE_ENV !== 'production') {
 const express = require('express')
 const morgan = require('morgan')
 const multer = require('multer')
+const cors = require('cors')
 const path = require('path')
 //initialized
 const app = express()
@@ -25,6 +26,7 @@ const storage = multer.diskStorage({
 app.use(multer({storage}).single('image'))
 app.use(express.urlencoded({ extended: false}))
 app.use(express.json())
+app.use(cors())
 
 //routes
 app.use('/api/books', require('./routes/routes'))
@@ -34,5 +36,5 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 //start up server
 app.listen(app.get('port'), () => {
-    console.log('Server on port', app.get('port'))
+    //console.log('Server on port', app.get('port'))
 })

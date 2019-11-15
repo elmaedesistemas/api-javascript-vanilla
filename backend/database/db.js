@@ -8,3 +8,4 @@ const HOST = process.env.HOST
  })
      .then(db => console.log('connect successfully'))
      .catch(err => console.error('connect unsuccessfully'))
+ 

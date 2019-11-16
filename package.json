@@ -9,7 +9,8 @@
     "dev": "cross-env NODE_ENV=development nodemon ./backend/index.js --ignore frontend",
     "push": "cross-env NODE_ENV=production node ./backend/index.js",
     "postinstall": "npm run build",
-    "dev:server": "webpack-dev-server"
+    "dev:server": "webpack-dev-server",
+    "start": "node backend/index.js"
   },
   "keywords": [
     "api",
